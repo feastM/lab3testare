@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Proiect APA</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+   
+          <h1><a href="index.html"> Proiect APA <span class="logo_colour"> Real-time Convertor </span></a></h1>
+          <h2>cu ajutorul openexchangerates API</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+
+          <li class="selected"><a href="index.html">Pagina Principală</a></li>
+          <li><a href="convert.html">Convertor</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      
+      <div id="content">
+        <form action="#" method="post">
+          <div class="form_settings">
+            <p><span>Username</span><input class="contact" type="text" name="your_name" size="10" value="" /></p>
+            <p><span>Password</span><input class="contact" type="text" name="your_email" value="" /></p>
+            <p style="padding-top: 10px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Log in" /></p>
+          </div>
+        </form>
+        
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Introduceti cuvântul....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+        
+
+  
+      </div>
+      <div id=sidebar>
+        <h1>
+            
+<button type="button" onclick="loadDoc()">Request data</button>
+api_dev_key     : "44d1f45b8da9bf8fba98b1e04506e120",
+api_user_key    : "1fc877146f313e98ff0a670f004e4ded",
+
+          <script>
+      function loadDoc() {  
+        let api = {
+      option: "paste",
+      user_key: "1fc877146f313e98ff0a670f004e4ded",
+      dev_key: '44d1f45b8da9bf8fba98b1e04506e120',
+      paste_name: "MyTitle",
+      paste_format: "JSON",
+      paste_private: 0,
+      paste_code: ""
+};
+
+  let request = new XMLHttpRequest();
+  request.open('POST', 'http://pastebin.com/api/api_post.php', true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  data['test'] = 'Yeah PasteBin!';
+  dataString = 'api_option='+api.option+'&api_user_key='+api.user_key+'&api_dev_key='+api.dev_key+
+'&api_paste_name='+api.paste_name+'&api_paste_format='+api.paste_format+
+'&api_paste_private='+api.paste_private+'&api_paste_code='+data;
+request.onreadystatechange = function() {
+    if (request.status == 200 && request.readyState == 4) {
+        alert("URL to new pastebin file: " + request.responseText);
+    }
+}
+  request.send(dataString);
+    
+}
+
+</script>
+          </h1>
+      </div>
+     
+
+    </div>
+    <div id="footer">
+      Copyright &copy; Miaun Alexandru & Iluță Ciprian  
+    </div>
+  </div>
+</body>
+</html>
